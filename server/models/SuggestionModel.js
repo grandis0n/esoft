@@ -28,3 +28,4 @@ export const SuggestionModel = database.define("suggestion", {
     timestamps: false,
     schema: 'public'
 })
+

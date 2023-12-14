@@ -18,3 +18,5 @@ export const SuggestionValidatorsUpdate = [
     body('realty_id', 'Плохой формат идентификатора недвижимости').optional().isInt({min: 1}),
     body('price', 'Плохой формат цены').optional().isInt({min: 1}),
 ]
+
+
