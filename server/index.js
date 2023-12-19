@@ -8,16 +8,14 @@ config()
 
 const app = express();
 
+app.use(cors({
+    origin: '*'
+}));
+
 const PORT = process.env["PORT_API"] || 6000;
 export const UTC_TIME = eval(String(process.env["UTC_TIME"]))
 
 app.use(express.json())
-app.use(cors(
-    {
-        credentials: true,
-        origin: process.env["CLIENT_URL"]
-    }
-))
 app.use('/api', router)
 
 database.sync({alter: true}).then(async () => {
