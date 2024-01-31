@@ -20,12 +20,14 @@ export default function CreateEventScreen({exit, user, setIsCreateScreen}) {
             width: "100%",
             padding: 0,
             display: "flex",
+            marginTop: 30,
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "space-between"
         },
         block__header__heading: {
-            fontSize: 20
+            fontSize: 30,
+            fontWeight: 'bold',
         },
         block__topBlock: {
             display: "flex",
@@ -42,7 +44,8 @@ export default function CreateEventScreen({exit, user, setIsCreateScreen}) {
             width: "100%"
         },
         form__text: {
-            fontSize: 18
+            fontSize: 18,
+            marginBottom: 8,
         }
     })
 
@@ -108,7 +111,7 @@ export default function CreateEventScreen({exit, user, setIsCreateScreen}) {
             }
             body = JSON.stringify(body)
             let status
-            const resData = await fetch("https://esoft.onrender.com/api/event/create", {
+            const resData = await fetch("https://esoft-hiha.onrender.com/api/event/create", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
